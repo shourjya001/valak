@@ -5,12 +5,12 @@ url: "dbe_cfl_user_accessTransferSave.php",
 data: ("searchType":searchType, "searchString": searchString ),
 dataType: "json",
 success: function(resultData) {
-if (resultData = false) {
+if (resultData != false) {
 if(check == 0) populateSearchOptions (stype, resultData);
 if(stype=='sgr') {
 commonsearch('fetchLEBasedonSGR', resultData[0]['id'], searchParam, 'le',0);
 }else if(stype =='le') {
-if($("#selectsgr_code option:selected").val() I='" && $("#selectle_code option:selected").val() != ''){ checkForCreditFiles($("#selectsgr_code option: selected").val(),$("#selectle_code option:selected").val()); }else if($("#txtle_code").val() != '" || $("#txtle_name").val() != ''){
+if($("#selectsgr_code option:selected").val() != '' &&("#selectle_code option:selected").val() != ''){ checkForCreditFiles($("#selectsgr_code option: selected").val(),$("#selectle_code option:selected").val()); }else if($("#txtle_code").val() != '" || $("#txtle_name").val() != ''){
 sgrdata = {};
 sgrdata['sgr'] = ('id': resultData[0].sgr_code, 'name': resultData[0].sgr_name);
 populateSearchOptions('sgr',sgrdata);
