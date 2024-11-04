@@ -2,9 +2,9 @@ function getUserDropdownDetails(res)
 $('#sgrtable').show();
 $('#sgrspan').show();
 $('.BodyText').show();
-$("#userassigntr").show();
-$("#SubmitCFDetailsTD").show();
-$("#fetchCFDetailsTD").hide();
+$('#userassigntr').show();
+$('#SubmitCFDetailsTD').show();
+$('#fetchCFDetailsTD').hide();
 strdata ="";
 s = "";
 $.each(res, function(index, item) { 
