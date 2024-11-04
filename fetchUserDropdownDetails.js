@@ -1,8 +1,8 @@
 function fetchUserDropdownDetails(ctype, dtype){
 if(ctype =='codria'){
 dtajson = {
-"sub_group_code": 'fetchLegalEntityBasedonID',
-"searchType": $("#selectsgr_code option: selected").val(),
+"searchType": 'fetchLegalEntityBasedonID',
+"sub_group_code": $("#selectsgr_code option: selected").val(),
 "codria": $('input[name="codria"]:checked').val(),
 };
 }
@@ -15,7 +15,6 @@ dtajson = {
 }
 },
 $.ajax({
-};
 type: 'POST',
 url: "dbe_cfl_user_accessTransferSave.php",
 data: dtajson,
