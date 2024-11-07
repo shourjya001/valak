@@ -1,31 +1,17 @@
 function populateSearchOptions (stype, resultData) {
-
 //populateSearchOptions("")
-
 alert("populateSearchOptions_1");
-
 var selectCode = document.createElement("SELECT");
-
 alert("populateSearchOptions_2");
-
-selectCode. id = "select" + stype + " code";
-
+selectCode. id = "select" + stype + "_code";
 selectCode.onchange = new Function("selectdropdown('" + stype + "', 'code')");
-
 var selectName = document.createElement("SELECT");
-
-selectName.id = "select" + stype + "name";
-
+selectName.id = "select" + stype + "_name";
 selectName.onchange = new Function ("selectdropdown('" + stype + "', 'name')");
-
 // Replace existing elements
-
 var txtCode = document.all["txt" + stype + "_code"];
-
-var txtName = document.all["txt" + stype + "name"];
-
+var txtName = document.all["txt" + stype + "_name"];
 if (txtCode && txtName) {
-
 txtCode.parentElement.replaceChild(selectCode, txtCode);
 
 txtName.parentElement.replaceChild(selectName, txtName);
@@ -35,7 +21,6 @@ txtName.parentElement.replaceChild(selectName, txtName);
 // Populate options
 
 for (var index = 0; index < resultData.length; index++) {
-
 var item = resultData resultData [index];
 
 var optionCode = document.createElement("OPTION");
