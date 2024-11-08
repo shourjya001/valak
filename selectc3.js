@@ -21,7 +21,7 @@ dataType: "json",
 success: function(res){
 $('#selectc2').empty();
 var optionExists=($('#selectc2 option[value=""]').length > 0);
-if(loptionExists)
+if(!optionExists)
 {
 $("#selectc2").prepend("<option value=""></option>');
 }
